@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6A2BDA"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="@android:color/black"
+        android:shadowDx="10"
+        android:shadowRadius="50"
+        android:text="@string/welcome_to_paper_rock_scissors"
+        android:textColor="#C8C8C8"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.151" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/select_image"
+        android:textColor="#C8C8C8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <ImageView
+        android:id="@+id/paper"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="344dp"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/rock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+
+        app:srcCompat="@drawable/paper" />
+
+    <ImageView
+        android:id="@+id/rock"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="284dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toStartOf="@+id/scissors"
+        app:layout_constraintStart_toEndOf="@+id/paper"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/rock" />
+
+    <ImageView
+        android:id="@+id/scissors"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="344dp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rock"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/scissors" />
+
+    <TextView
+        android:id="@+id/whoWin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="TextView"
+        android:textColor="#C8C8C8"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/border"
+        android:text="PLAY!"
+        android:textColor="#C8C8C8"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whoWin" />
+
+    <Button
+        android:id="@+id/staticstics"
+        android:layout_width="77dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="19dp"
+        android:text="Wyniki"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
